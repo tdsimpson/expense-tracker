@@ -34,6 +34,8 @@ database.ref('expense').push({
     createdAt: 470
 })
 
+console.log("MY TEST")
+
 
 //Updating based on given id
 // database.ref('notes/-LtN5966KChYaAw2D_vE').update({
