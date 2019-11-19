@@ -5,7 +5,6 @@
   "author": "Taylor Simpson",
   "license": "MIT",
   "scripts": {
-    "serve": "live-server public/",
     "build:dev": "webpack --watch",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
@@ -25,8 +24,6 @@
     "express": "4.15.4",
     "extract-text-webpack-plugin": "3.0.0",
     "firebase": "^7.3.0",
-    "jest": "20.0.4",
-    "live-server": "^1.2.1",
     "moment": "^2.24.0",
     "node-sass": "^4.13.0",
     "normalize.css": "^8.0.1",
@@ -42,7 +39,11 @@
     "style-loader": "0.18.2",
     "uuid": "^3.3.3",
     "validator": "8.0.0",
-    "webpack": "3.1.0",
+    "webpack": "3.1.0"
+  },
+  "devDependencies": {
+    "chalk": "^3.0.0",
+    "jest": "20.0.4",
     "webpack-dev-server": "2.5.1"
   }
 }
