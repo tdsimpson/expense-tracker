@@ -1,4 +1,10 @@
 
 export default (expenses) => {
-    const result = expenses.map({ amount })
+    if (expenses.length === 0) {
+        return 0
+    } else {
+        return expenses
+            .map((expense) => expense.amount)
+            .reduce((sum, value) => sum + value);
+    }
 };
