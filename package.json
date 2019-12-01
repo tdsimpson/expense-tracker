@@ -47,6 +47,8 @@
   "devDependencies": {
     "jest": "20.0.4",
     "react-test-renderer": "15.6.1",
-    "webpack-dev-server": "3.1.11"
+    "webpack-dev-server": "3.1.11",
+    "enzyme": "2.9.1",
+    "enzyme-to-json": "1.5.1"
   }
 }
