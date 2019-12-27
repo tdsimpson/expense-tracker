@@ -29,7 +29,6 @@ test('should setup remove expense action object', () => {
         id: '123abc'
     });
 });
-
 test('should remove expense from firebase', (done) => {
     const store = createMockStore({});
     const id = expenses[2].id;
@@ -44,8 +43,7 @@ test('should remove expense from firebase', (done) => {
         expect(snapshot.val()).toBeFalsy();
         done();
     });
-
-})
+});
 
 test('should setup edit expense action object', () => {
     const action = editExpense('123abc', { note: 'New note value' });
