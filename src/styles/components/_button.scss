@@ -3,6 +3,13 @@
     border: none;
     color: white;
     font-size: $font-size-large;
+    display: inline-block;
     font-weight: 300;
+    line-height: 1;
     padding: $s-size;
+    text-decoration: none;
+}
+
+.button--link{
+    background: none;
 }
