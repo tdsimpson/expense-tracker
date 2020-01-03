@@ -1,21 +1,39 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
+import ConfirmDeleteModal from './ConfirmDeleteModal';
 import { startEditExpense, startRemoveExpense } from '../actions/expenses';
 
 export class EditExpensePage extends React.Component {
+
+    state = {
+        selectedExpense: undefined
+    }
+
     onSubmit = (expense) => {
         this.props.startEditExpense(this.props.expense.id, expense);
         this.props.history.push('/');
     };
 
     onRemove = () => {
-        const confirmDelete = confirm(`Are you sure you want to delete \n "${this.props.expense.description}"`);
-        if (confirmDelete == true) {
-            this.props.startRemoveExpense({ id: this.props.expense.id });
-            this.props.history.push('/');
-        }
+        this.setState(() => ({
+            selectedExpense: this.props.expense.description
+        }));
     };
+
+    handleDeletionYes = () => {
+        this.setState(() => ({
+            selectedExpense: undefined
+        }))
+        this.props.startRemoveExpense({ id: this.props.expense.id });
+        this.props.history.push('/');
+    }
+
+    handleDeletionNo = () => {
+        this.setState(() => ({
+            selectedExpense: undefined
+        }))
+    }
 
 
     render() {
@@ -35,6 +53,11 @@ export class EditExpensePage extends React.Component {
                     />
                     <button className="button button--secondary" onClick={this.onRemove}>Remove Expense</button>
                 </div>
+                <ConfirmDeleteModal
+                    selectedExpense={this.state.selectedExpense}
+                    handleDeletionNo={this.handleDeletionNo}
+                    handleDeletionYes={this.handleDeletionYes}
+                />
             </div>
         );
     }
