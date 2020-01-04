@@ -17,6 +17,10 @@ button {
     cursor: pointer;
 }
 
+button:focus {
+    outline: 0;
+}
+
 button:disabled {
     cursor: default;
 }

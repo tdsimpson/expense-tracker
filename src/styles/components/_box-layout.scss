@@ -1,6 +1,7 @@
 .box-layout {
     align-items: center;
-    background: url('/images/bg.jpg');
+    background-color: $blue;
+    //background: url('/images/bg.png');
     background-size: cover;
     display: flex;
     height: 100vh;
@@ -19,4 +20,18 @@
 .box-layout__title {
     margin: 0 0 $m-size 0;
     line-height: 1;
+}
+
+.loginButton {
+    background-color: transparent;
+    border-width: medium;
+    border-color: black;
+    color: black;
+    font-size: $font-size-large;
+    display: inline-block;
+    font-weight: 300;
+    line-height: 1;
+    padding: $s-size;
+    text-decoration: none;
+    border-radius: 0.5rem;
 }
