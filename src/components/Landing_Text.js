@@ -2,8 +2,15 @@ import React from 'react'
 
 const Landing_Text = () => {
     return (
-        <div>
-            <h1>Expense tracking made easy</h1>
+        <div className="landing-content-container">
+            <div className="landing-text-info-area">
+                <p className="landing-text__title">Expense tracking</p>
+                <p className="landing-text__title">made easy</p>
+                <p className="landing-text__paragraph">Stay on top of your spending
+                 with Expense Tracker - an online  tracking tool to help you better
+                 understand your habits and make measurable change. </p>
+                <button className="button button--get-started">Get Started</button>
+            </div>
         </div>
     )
 }

@@ -1,7 +1,5 @@
 .landing-header {
-    background: rgb(146, 146, 204);
-    height: 12rem;
-
+    background: none;
 }
 
 .landing-content-container {
@@ -17,14 +15,17 @@
     padding: $l-size 0;
 }
 
-
 .landing-header__title {
     color: black;
     font-family: Nunito;
     text-decoration: none;
 
-
-    h1 {
+    h2 {
         margin: 0;
+        font-size: 3rem;
+        font-weight: 500;
+        color: $dark-blue;
+
     }
+
 }

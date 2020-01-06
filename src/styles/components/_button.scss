@@ -12,6 +12,10 @@
     font-family: Nunito;
 }
 
+.button--get-started {
+    background-color: $dark-blue;
+}
+
 .button--link {
     background: none;
 }
@@ -22,13 +26,13 @@
     border-radius: 1rem;
     color: black;
     background-color: transparent;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .button--menu {
     background: none;
     color: black;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .button--secondary {

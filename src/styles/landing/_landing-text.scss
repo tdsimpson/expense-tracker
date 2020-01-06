@@ -1,0 +1,30 @@
+.landing-text__title {
+    color: black;
+    font-family: Nunito;
+    text-decoration: none;
+    margin: 0;
+    font-size: $font-size-title;
+    font-weight: 700;
+    line-height: 1.25;
+
+}
+
+.landing-text__paragraph {
+    color: black;
+    font-family: Nunito;
+    text-decoration: none;
+    margin: 0;
+    font-size: $font-size-large;
+    font-weight: 500;
+    padding: $m-size 0;
+    width: 40%;
+    padding: $l-size 0 $l-size 0;
+}
+
+.landing-text-info-area {
+    padding: $l-size 0;
+}
+
+.landing-text-info-area {
+    padding: 7.5rem 0 0 0;
+}
