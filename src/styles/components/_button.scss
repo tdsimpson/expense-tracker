@@ -1,5 +1,5 @@
 .button {
-    background-color: $blue;
+    background-color: $dark-blue;
     border: none;
     color: white;
     font-size: $font-size-large;
@@ -12,22 +12,27 @@
     font-family: Nunito;
 }
 
-.button--get-started {
-    background-color: $dark-blue;
-}
-
 .button--link {
     background: none;
 }
 
-.button-login {
+.button--login {
     padding: $s-size $l-size $s-size $l-size;
-    border: 0.23rem solid black;
-    border-radius: 1rem;
-    color: black;
-    background-color: transparent;
-    font-weight: 600;
+    font-weight: 500;
 }
+
+.button--login:hover {
+    background-color: lighten($dark-blue, 12%)
+}
+
+
+
+.button--logout {
+    background: none;
+    color: black;
+    font-weight: 400;
+}
+
 
 .button--menu {
     background: none;

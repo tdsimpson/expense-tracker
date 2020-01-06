@@ -1,5 +1,6 @@
 .header {
-    background: $dark-blue;
+    background: $faded-blue;
+    font-family: Nunito;
 }
 
 .header__content {
@@ -10,7 +11,7 @@
 }
 
 .header__title {
-    color: white;
+    color: black;
     text-decoration: none;
 
     h1 {

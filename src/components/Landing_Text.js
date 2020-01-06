@@ -9,7 +9,7 @@ const Landing_Text = () => {
                 <p className="landing-text__paragraph">Stay on top of your spending
                  with Expense Tracker - an online  tracking tool to help you better
                  understand your habits and make measurable change. </p>
-                <button className="button button--get-started">Get Started</button>
+                <button className="button">Get Started</button>
             </div>
         </div>
     )
