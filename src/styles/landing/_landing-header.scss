@@ -1,0 +1,30 @@
+.landing-header {
+    background: rgb(146, 146, 204);
+    height: 12rem;
+
+}
+
+.landing-content-container {
+    margin: 0 auto;
+    padding: 0 $m-size;
+    max-width: 120rem;
+}
+
+.landing-header__content {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: $l-size 0;
+}
+
+
+.landing-header__title {
+    color: black;
+    font-family: Nunito;
+    text-decoration: none;
+
+
+    h1 {
+        margin: 0;
+    }
+}

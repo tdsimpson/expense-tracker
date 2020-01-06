@@ -4,13 +4,21 @@ import { connect } from 'react-redux';
 import { startLogin } from '../actions/auth';
 
 export const Landing_Header = ({ startLogin }) => (
-    <header className="header">
-        <div className="content-container">
-            <div className="header__content">
-                <Link className="header__title" to="/dashboard">
-                    <h1>Expense Tracker</h1>
-                </Link>
-                <button className="button button--link" onClick={startLogin}>Login</button>
+    <header className="landing-header">
+        <div className="landing-content-container">
+            <div className="landing-header__content">
+                <div className="title-container">
+                    <Link className="landing-header__title" to="/dashboard">
+                        <h2>Expense Tracker</h2>
+                    </Link>
+                </div>
+                <div className="menu-container">
+                    <button className="button button--menu" onClick={startLogin}>Overview</button>
+                    <button className="button button--menu" onClick={startLogin}>Why Us</button>
+                    <button className="button button--menu" onClick={startLogin}>Github</button>
+                    <button className="button button-login" onClick={startLogin}>Login</button>
+                </div>
+
             </div>
         </div>
     </header>

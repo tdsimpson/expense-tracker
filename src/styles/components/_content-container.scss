@@ -1,5 +1,16 @@
 .content-container {
     margin: 0 auto;
     padding: 0 $m-size;
-    max-width: 80rem;
+    max-width: 100rem;
+}
+
+.menu-container {
+    width: 60%;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.title-container {
+    width: 40%;
 }
