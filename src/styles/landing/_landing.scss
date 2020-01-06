@@ -3,3 +3,18 @@
     width: 100vw;
     //background: url('/images/bg.png');
 }
+
+.landing-content-container {
+    margin: 0 auto;
+    padding: 0 $m-size;
+    max-width: 120rem;
+}
+
+.landing-body-content {
+    display: flex;
+}
+
+.pig {
+    padding-top: 8rem;
+    padding-right: 10rem;
+}
