@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { startLogin } from '../actions/auth';
 
+
 export const Landing_Header = ({ startLogin }) => (
     <header className="landing-header">
         <div className="landing-content-container">

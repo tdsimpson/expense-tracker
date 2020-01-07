@@ -23,3 +23,50 @@
     }
 
 }
+
+.toggle {
+    width: 100%;
+    padding: 10px 20px;
+    background: $dark-blue;
+    text-align: right;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 30px;
+    display: none;
+}
+
+@media(max-width: $desktop-breakpoint) {
+    .toggle {
+        display: block;
+    }
+
+    .title-container {
+        display: none;
+    }
+
+    .menu-container {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: $faded-blue;
+        padding: $m-size;
+
+        button {
+            text-align: center;
+            padding: $m-size;
+        }
+
+    }
+
+    .landing-content-container {
+        padding: 0;
+    }
+
+    .landing-header__content {
+        padding: 0;
+    }
+
+    .active {
+        display: flex;
+    }
+}
