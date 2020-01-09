@@ -1,8 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { startLogin } from '../actions/auth';
 
+const goToPage = () => {
+    window.open("https://github.com/tdsimpson/expense-tracker", '_blank');
+}
+
+const notConnected = () => {
+    alert("Coming soon. Please click 'Login' or 'Github'");
+}
 
 export const Landing_Header = ({ startLogin }) => (
     <header className="landing-header">
@@ -12,9 +18,9 @@ export const Landing_Header = ({ startLogin }) => (
                     <h2>Expense Tracker</h2>
                 </div>
                 <div className="menu-container">
-                    <button className="button button--menu" onClick={startLogin}>Overview</button>
-                    <button className="button button--menu" onClick={startLogin}>Why Us</button>
-                    <button className="button button--menu" onClick={startLogin}>Github</button>
+                    <button className="button button--menu" onClick={notConnected}>Overview</button>
+                    <button className="button button--menu" onClick={notConnected}>Why Us</button>
+                    <button className="button button--menu" onClick={goToPage}>Github</button>
                     <button className="button button--login" onClick={startLogin}>Login</button>
                 </div>
 

@@ -15,7 +15,7 @@ export const LandingPage = () => {
     }, [])
 
     return (
-        <div>
+        <div className="landing">
             <div className="toggle">
                 <MdViewHeadline className="responsive-menu" />
             </div>
