@@ -28,7 +28,6 @@
     width: 100%;
     padding: 10px 20px;
     background: $dark-blue;
-    text-align: right;
     box-sizing: border-box;
     color: #fff;
     font-size: 30px;
@@ -70,3 +69,22 @@
         display: flex;
     }
 }
+
+.responsive-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100rem;
+
+}
+
+.responsive-title {
+    font-family: Nunito;
+    font-weight: 500;
+    font-size: 3rem;
+
+}
+
+.responsive-menu {}
+
+//something weird about taking this out. Find out later.

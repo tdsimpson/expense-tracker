@@ -17,7 +17,10 @@ export const LandingPage = () => {
     return (
         <div className="landing">
             <div className="toggle">
-                <MdViewHeadline className="responsive-menu" />
+                <div className="responsive-header-content">
+                    <p className="responsive-title">Expense Tracker</p>
+                    <MdViewHeadline className="responsive-menu" />
+                </div>
             </div>
             <div className="landing landing-content-container ">
                 <Landing_Header />
