@@ -16,6 +16,8 @@
     font-size: $font-size-large;
     font-weight: 500;
     padding: $l-size 0 $l-size 0;
+    word-break: normal;
+    width: 450px;
 }
 
 
@@ -40,6 +42,8 @@
 
     .landing-text__paragraph {
         text-align: center;
+        width: 100%;
+        padding: $l-size;
     }
 
     .landing-text-info-area {

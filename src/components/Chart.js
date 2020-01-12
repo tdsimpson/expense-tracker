@@ -25,7 +25,7 @@ class Chart extends Component {
                     options={{
                         title: {
                             display: this.props.displayTitle,
-                            text: 'Largest Cities In ' + this.props.location,
+                            text: 'Expenses for ' + this.props.timeframe,
                             fontSize: 25
                         },
                         legend: {

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Chart from './Chart';
 import { connect } from 'react-redux';
-import ExpenseListItem from './ExpenseListItem';
 import selectExpenses from '../selectors/expenses';
 
 class ChartInfo extends Component {
@@ -26,7 +25,7 @@ class ChartInfo extends Component {
                 labels: expenseNames,
                 datasets: [
                     {
-                        label: 'Population',
+                        label: 'Amount',
                         data: expenseAmounts,
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.6)',
@@ -47,7 +46,7 @@ class ChartInfo extends Component {
         return (
             <div>
                 {this.props.expenses.length}
-                <Chart chartData={this.state.chartData} location="Massachusetts" legendPosition="bottom" />
+                <Chart chartData={this.state.chartData} timeframe="|Massachusetts|" legendPosition="bottom" />
             </div>
         );
     }

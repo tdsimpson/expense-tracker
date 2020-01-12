@@ -18,22 +18,28 @@
 }
 
 .modal {
-    background: $dark-blue;
-    color: white;
+    background: $faded-blue;
+    color: $dark-blue;
     max-width: 30rem;
     outline: none;
     padding: $l-size;
     text-align: center;
+    border: 1rem $dark-blue;
     border-radius: 1rem;
 }
 
 .modal__title {
     margin: 0 0 $m-size 0;
+    font-family: Nunito;
 }
 
 .modal__body {
     font-size: 2rem;
     font-weight: 300;
-    margin: 0 0 $l-size 0;
+    margin: 0 0 $m-size 0;
     word-break: break-all;
+}
+
+.modal__button {
+    margin: 2rem;
 }
