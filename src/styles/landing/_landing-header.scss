@@ -19,9 +19,7 @@
         font-size: 3rem;
         font-weight: 500;
         color: $dark-blue;
-
     }
-
 }
 
 .toggle {
@@ -47,8 +45,9 @@
         display: none;
         width: 100%;
         flex-direction: column;
-        background-color: $faded-blue;
+        background-color: lighten($faded-blue, 10%);
         padding: $m-size;
+        border-bottom: 2px solid $dark-blue;
 
         button {
             text-align: center;
@@ -67,6 +66,9 @@
 
     .active {
         display: flex;
+        position: absolute;
+        z-index: 10;
+        margin-top: 12rem;
     }
 }
 
@@ -85,6 +87,6 @@
 
 }
 
-.responsive-menu {}
-
-//something weird about taking this out. Find out later.
+.responsive-menu {
+    //this is just icon button
+}

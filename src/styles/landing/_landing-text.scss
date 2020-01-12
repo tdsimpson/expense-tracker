@@ -28,6 +28,10 @@
     justify-content: space-between;
 }
 
+.pig {
+    padding: 5rem 8rem 0 0;
+}
+
 @media(max-width: $desktop-breakpoint + 12) {
     .landing-body {
         flex-direction: column;
@@ -44,5 +48,5 @@
 }
 
 .pig {
-    padding: 5rem 8rem 0 0;
+    padding: 5rem;
 }
