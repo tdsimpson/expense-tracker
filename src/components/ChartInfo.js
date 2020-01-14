@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 import Chart from './Chart';
 import { connect } from 'react-redux';
 import selectExpenses from '../selectors/expenses';
 
 class ChartInfo extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            chartData: {}
+            chartData: {},
         }
     }
 
@@ -17,10 +18,18 @@ class ChartInfo extends Component {
 
     getChartData() {
 
-        const expenseNames = this.props.expenses.map((expense) => expense.description);
+        const months = [
+            'January', 'February', 'March', 'April',
+            'May', 'June', 'July', 'August',
+            'September', 'October', 'November', 'December'
+        ];
+
+        const currentMonth = months[moment().month()];
+        const expenseNames = this.props.expenses.map((expense) => moment(expense.createdAt));
         const expenseAmounts = this.props.expenses.map((expense) => expense.amount / 100);
 
         this.setState({
+            currentMonth: currentMonth,
             chartData: {
                 labels: expenseNames,
                 datasets: [
@@ -28,13 +37,7 @@ class ChartInfo extends Component {
                         label: 'Amount',
                         data: expenseAmounts,
                         backgroundColor: [
-                            'rgba(255, 99, 132, 0.6)',
                             'rgba(54, 162, 235, 0.6)',
-                            'rgba(255, 206, 86, 0.6)',
-                            'rgba(75, 192, 192, 0.6)',
-                            'rgba(153, 102, 255, 0.6)',
-                            'rgba(255, 159, 64, 0.6)',
-                            'rgba(255, 99, 132, 0.6)'
                         ]
                     }
                 ]
@@ -45,8 +48,10 @@ class ChartInfo extends Component {
     render() {
         return (
             <div>
-                {this.props.expenses.length}
-                <Chart chartData={this.state.chartData} timeframe="|Massachusetts|" legendPosition="bottom" />
+                <Chart
+                    chartData={this.state.chartData}
+                    timeframe={this.state.currentMonth}
+                />
             </div>
         );
     }
@@ -54,7 +59,7 @@ class ChartInfo extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        expenses: selectExpenses(state.expenses, state.filters)
+        expenses: selectExpenses(state.expenses, state.filters),
     };
 };
 
