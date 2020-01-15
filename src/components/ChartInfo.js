@@ -26,8 +26,8 @@ class ChartInfo extends Component {
             'September', 'October', 'November', 'December'
         ];
 
-        const currentMonth = this.state.startDate; //might be working
-        // const currentMonth = months[moment().month()];
+        //const currentMonth = this.state.startDate; //might be working
+        const currentMonth = months[moment().month()];
         const expenseTimes = this.props.expenses.map((expense) => moment(expense.createdAt));
         const expenseAmounts = this.props.expenses.map((expense) => expense.amount / 100);
 

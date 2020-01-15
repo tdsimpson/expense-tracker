@@ -74,6 +74,29 @@ export default class ExpenseForm extends React.Component {
                     value={this.state.description}
                     onChange={this.onDescriptionChange}
                 />
+
+                <select
+                    id="catagory-dropdown"
+                    className="text-input"
+                    value={this.state.catagory}
+                    onChange={this.onCatagoryChange}
+                >
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="Housing">Housing </option>
+                    <option value="Utilities">Utilities</option>
+                    <option value="Food">Food</option>
+                    <option value="Transportation">Transportation </option>
+                    <option value="Insurance">Insurance</option>
+                    <option value="Medical & Healthcare">Medical & Healthcare</option>
+                    <option value="Investing & Debt Payments"> Investing & Debt Payments</option>
+                    <option value="Subscriptions">Subscriptions</option>
+                    <option value="Recreation & Entertainment">Recreation & Entertainment</option>
+                    <option value="Miscellaneous">Miscellaneous</option>
+
+                </select>
+
+
+
                 <input
                     type="text"
                     placeholder="Amount"
@@ -96,13 +119,7 @@ export default class ExpenseForm extends React.Component {
                     onChange={this.onNoteChange}
                 >
                 </textarea>
-                <textarea
-                    placeholder="Add the catagory for your expense (optional)"
-                    className="textarea"
-                    value={this.state.catagory}
-                    onChange={this.onCatagoryChange}
-                >
-                </textarea>
+
                 <div>
                     <button className="button">Save Expense</button>
                 </div>

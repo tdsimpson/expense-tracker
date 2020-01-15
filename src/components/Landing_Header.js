@@ -14,6 +14,9 @@ export const Landing_Header = ({ startLogin }) => (
     <header className="landing-header">
         <div className="landing-content-container">
             <div className="landing-header__content">
+                <div className="header-logo">
+                    <img src="/images/expenseLogo.png" />
+                </div>
                 <div className=" landing-header__title title-container">
                     <h2>Expense Tracker</h2>
                 </div>
@@ -23,7 +26,6 @@ export const Landing_Header = ({ startLogin }) => (
                     <button className="button button--menu" onClick={goToPage}>Github</button>
                     <button className="button button--login" onClick={startLogin}>Login</button>
                 </div>
-
             </div>
         </div>
     </header>
