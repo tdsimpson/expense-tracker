@@ -10,6 +10,7 @@ export default class ExpenseForm extends React.Component {
         this.state = {
             description: props.expense ? props.expense.description : '',
             note: props.expense ? props.expense.note : '',
+            catagory: props.expense ? props.expense.catagory : '',
             amount: props.expense ? (props.expense.amount / 100).toString() : '',
             createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
             calendarFocused: false,
@@ -25,6 +26,10 @@ export default class ExpenseForm extends React.Component {
     onNoteChange = (e) => {
         const note = e.target.value;
         this.setState(() => ({ note }));
+    };
+    onCatagoryChange = (e) => {
+        const catagory = e.target.value;
+        this.setState(() => ({ catagory }));
     };
     onAmountChange = (e) => {
         const amount = e.target.value;
@@ -52,7 +57,8 @@ export default class ExpenseForm extends React.Component {
                 description: this.state.description,
                 amount: parseFloat(this.state.amount, 10) * 100,
                 createdAt: this.state.createdAt.valueOf(),
-                note: this.state.note
+                note: this.state.note,
+                catagory: this.state.catagory
             });
         }
     };
@@ -88,6 +94,13 @@ export default class ExpenseForm extends React.Component {
                     className="textarea"
                     value={this.state.note}
                     onChange={this.onNoteChange}
+                >
+                </textarea>
+                <textarea
+                    placeholder="Add the catagory for your expense (optional)"
+                    className="textarea"
+                    value={this.state.catagory}
+                    onChange={this.onCatagoryChange}
                 >
                 </textarea>
                 <div>

@@ -33,6 +33,7 @@ export class EditExpensePage extends React.Component {
         this.setState(() => ({
             selectedExpense: undefined
         }))
+        this.props.history.push('/');
     }
 
 

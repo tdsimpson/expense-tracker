@@ -60,9 +60,7 @@ export class ExpenseListFilters extends React.Component {
                             isOutsideRange={() => false}
                         />
                     </div>
-
                 </div>
-
             </div>
         );
     }
