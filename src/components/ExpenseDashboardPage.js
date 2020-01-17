@@ -7,9 +7,10 @@ import ChartInfo from './ChartInfo';
 const ExpenseDashboardPage = () =>
     <div>
         <ExpensesSummary />
+        <ChartInfo />
         <ExpenseListFilters />
         <ExpenseList />
-        <ChartInfo />
+
     </div>
 
 export default ExpenseDashboardPage;

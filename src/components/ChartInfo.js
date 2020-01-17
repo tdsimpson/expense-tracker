@@ -4,11 +4,6 @@ import Chart from './Chart';
 import { connect } from 'react-redux';
 import selectExpenses from '../selectors/expenses';
 
-const months = [
-    'January', 'February', 'March', 'April',
-    'May', 'June', 'July', 'August',
-    'September', 'October', 'November', 'December'
-];
 
 const ChartInfo = (props) => {
 
@@ -16,14 +11,10 @@ const ChartInfo = (props) => {
         getChartData();
     }, [])
 
-
-    const [currentMonth, setCurrentMonth] = useState();
     const [chartData, setChartData] = useState({});
 
 
     const getChartData = () => {
-
-        setCurrentMonth(months[moment().month()]);
 
         //CHART DATA
         const expenseTimes = props.expenses.map((expense) => moment(expense.createdAt));
@@ -52,8 +43,7 @@ const ChartInfo = (props) => {
 
             <Chart
                 chartData={chartData}
-                timeframe={currentMonth}
-                selectedStateDate={(props.filters.startDate).valueOf()}
+                selectedStartDate={((props.filters.startDate).valueOf())}
                 selectedEndDate={(props.filters.endDate).valueOf()}
             />
         </div>

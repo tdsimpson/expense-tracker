@@ -15,6 +15,8 @@ class Chart extends Component {
         legendPosition: 'right',
     }
 
+
+
     render() {
         return (
             <div className="content-container">
@@ -25,8 +27,8 @@ class Chart extends Component {
                         options={{
                             title: {
                                 display: this.props.displayTitle,
-                                text: 'Expenses for ' + this.props.timeframe,
-                                fontSize: 25
+                                text: 'Expenses for ' + moment(this.props.selectedStartDate).format("MMMM"),
+                                fontSize: 20
                             },
                             legend: {
                                 display: this.props.displayLegend,
@@ -40,7 +42,7 @@ class Chart extends Component {
                                         unit: "day",
                                     },
                                     ticks: {
-                                        min: this.props.selectedStateDate,
+                                        min: this.props.selectedStartDate,
                                         max: this.props.selectedEndDate,
                                     }
                                 }],
@@ -49,7 +51,7 @@ class Chart extends Component {
                                         beginAtZero: true
                                     }
                                 }]
-                            }
+                            },
                         }}
                     />
                 </div>
