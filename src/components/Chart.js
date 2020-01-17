@@ -40,8 +40,8 @@ class Chart extends Component {
                                         unit: "day",
                                     },
                                     ticks: {
-                                        min: moment("01/01/2020"),
-                                        max: moment("01/31/2020")
+                                        min: this.props.selectedStateDate,
+                                        max: this.props.selectedEndDate,
                                     }
                                 }],
                                 yAxes: [{

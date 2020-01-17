@@ -3,8 +3,6 @@ import moment from 'moment';
 import Chart from './Chart';
 import { connect } from 'react-redux';
 import selectExpenses from '../selectors/expenses';
-import filters from '../reducers/filters'; //might be working
-
 
 const months = [
     'January', 'February', 'March', 'April',
@@ -18,7 +16,6 @@ const ChartInfo = (props) => {
         getChartData();
     }, [])
 
-    const [selectedDay, setSelectedDay] = useState();
 
     const [currentMonth, setCurrentMonth] = useState();
     const [chartData, setChartData] = useState({});
@@ -26,8 +23,6 @@ const ChartInfo = (props) => {
 
     const getChartData = () => {
 
-        //CURRENT MONTH
-        setSelectedDay(startDate);
         setCurrentMonth(months[moment().month()]);
 
         //CHART DATA
@@ -50,23 +45,26 @@ const ChartInfo = (props) => {
         })
     }
 
-
     return (
         <div>
-            {console.log(selectedDay)}
+            {console.log((props.filters.startDate).valueOf())}
+            {console.log(props.filters.endDate)}
+
             <Chart
                 chartData={chartData}
                 timeframe={currentMonth}
+                selectedStateDate={(props.filters.startDate).valueOf()}
+                selectedEndDate={(props.filters.endDate).valueOf()}
             />
         </div>
     );
-
 }
 
 const mapStateToProps = (state) => {
     return {
         expenses: selectExpenses(state.expenses, state.filters),
-        startDate: filters.stateDate
+        filters: state.filters
+
 
     };
 };
