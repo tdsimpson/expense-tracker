@@ -50,7 +50,7 @@ export default class ExpenseForm extends React.Component {
         e.preventDefault();
 
         if (!this.state.description || !this.state.amount) {
-            this.setState(() => ({ error: 'Please provide description and amount.' }));
+            this.setState(() => ({ error: 'Please provide description, amount and catagory.' }));
         } else {
             this.setState(() => ({ error: '' }));
             this.props.onSubmit({
@@ -81,7 +81,7 @@ export default class ExpenseForm extends React.Component {
                     value={this.state.catagory}
                     onChange={this.onCatagoryChange}
                 >
-                    <option value="" disabled selected>Select your option</option>
+                    <option value="" disabled>Select your option</option>
                     <option value="Housing">Housing </option>
                     <option value="Utilities">Utilities</option>
                     <option value="Food">Food</option>
@@ -94,8 +94,6 @@ export default class ExpenseForm extends React.Component {
                     <option value="Miscellaneous">Miscellaneous</option>
 
                 </select>
-
-
 
                 <input
                     type="text"

@@ -14,7 +14,6 @@ const ConfirmDeleteModal = (props) => (
             {props.selectedExpense && <p className="modal__body">{props.selectedExpense}</p>}
             <button className="button modal__button button--secondary " onClick={props.handleDeletionNo}>Cancel</button>
             <button className="button modal__button" onClick={props.handleDeletionYes}>Ok</button>
-
         </Modal>
     </div>
 );

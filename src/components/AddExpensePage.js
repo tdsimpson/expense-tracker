@@ -7,6 +7,7 @@ export class AddExpensePage extends React.Component {
     onSubmit = (expense) => {
         this.props.startAddExpense(expense);
         this.props.history.push('/');
+        window.location.reload(); //dirty way to make sure chart data updates
     };
     render() {
         return (

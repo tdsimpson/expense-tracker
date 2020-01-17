@@ -20,6 +20,8 @@ export default (state = expensesReducerDefaultState, action) => {
             });
         case "SET_EXPENSES":
             return action.expenses;
+        // case "SET_CHART_STATE":
+        //     return action.chartState;
         default:
             return state
     }

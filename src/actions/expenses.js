@@ -81,4 +81,9 @@ export const startSetExpenses = () => {
     };
 };
 
+// export const setChartState = (chartState) => ({
+//     type: 'SET_CHART_STATE',
+//     chartState
+// })
+
 

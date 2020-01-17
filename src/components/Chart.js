@@ -3,27 +3,25 @@ import { Bar, Line, Pie } from 'react-chartjs-2';
 import moment from 'moment';
 
 
+
 class Chart extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            chartData: props.chartData
-        }
     }
 
     static defaultProps = {
         displayTitle: true,
         displayLegend: true,
         legendPosition: 'right',
-        location: 'City'
     }
 
     render() {
         return (
             <div className="content-container">
                 <div className="chart">
+
                     <Line
-                        data={this.state.chartData}
+                        data={this.props.chartData}
                         options={{
                             title: {
                                 display: this.props.displayTitle,
@@ -40,9 +38,11 @@ class Chart extends Component {
                                     position: 'bottom',
                                     time: {
                                         unit: "day",
+                                    },
+                                    ticks: {
                                         min: moment("01/01/2020"),
                                         max: moment("01/31/2020")
-                                    },
+                                    }
                                 }],
                                 yAxes: [{
                                     ticks: {
@@ -59,3 +59,6 @@ class Chart extends Component {
 }
 
 export default Chart;
+
+
+
