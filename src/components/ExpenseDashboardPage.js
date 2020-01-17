@@ -10,7 +10,6 @@ const ExpenseDashboardPage = () =>
         <ChartInfo />
         <ExpenseListFilters />
         <ExpenseList />
-
     </div>
 
 export default ExpenseDashboardPage;
