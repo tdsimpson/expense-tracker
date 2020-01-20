@@ -1,6 +1,8 @@
 import React from 'react'
+import { connect } from 'react-redux';
+import { startLogin } from '../actions/auth';
 
-const Landing_Text = () => {
+const Landing_Text = ({ startLogin }) => {
     return (
         <div className="landing-body">
             <div className="landing-text-info-area">
@@ -10,7 +12,7 @@ const Landing_Text = () => {
                 your spending with Expense Tracker. An online
                     tracking tool to help you better understand your
                 habits and make measurable change. </p>
-                <button className="button">Get Started</button>
+                <button className="button button--login" onClick={startLogin}>Get Started</button>
             </div>
             <div>
                 <img className="pig" src="/images/pigIllustration.png" />
@@ -19,4 +21,8 @@ const Landing_Text = () => {
     )
 }
 
-export default Landing_Text;
+const mapDispatchToProps = (dispatch) => ({
+    startLogin: () => dispatch(startLogin())
+});
+
+export default connect(undefined, mapDispatchToProps)(Landing_Text);
