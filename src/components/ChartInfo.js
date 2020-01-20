@@ -66,20 +66,20 @@ const ChartInfo = (props) => {
         setChartData({
             datasets: [
                 {
-                    label: 'Amount',
+                    label: 'Amount in Dollars',
                     data: amountList,
-                    backgroundColor: [
-                        'rgba(54, 162, 235, 0.6)',
-                    ]
+                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                    hoverBackgroundColor: 'rgba(153, 102, 254, 0.6)',
                 }
+
             ],
             labels: timeList,
         })
     }
 
+
     return (
         <div>
-
             <Chart
                 chartData={chartData}
                 selectedStartDate={((props.filters.startDate).valueOf())}
@@ -88,6 +88,10 @@ const ChartInfo = (props) => {
         </div>
     );
 }
+
+
+
+
 
 const mapStateToProps = (state) => {
     return {

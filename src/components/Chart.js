@@ -12,17 +12,15 @@ class Chart extends Component {
     static defaultProps = {
         displayTitle: true,
         displayLegend: true,
-        legendPosition: 'right',
+        legendPosition: 'bottom',
     }
-
-
 
     render() {
         return (
             <div className="content-container">
                 <div className="chart">
 
-                    <Line
+                    <Bar
                         data={this.props.chartData}
                         options={{
                             title: {
@@ -51,6 +49,18 @@ class Chart extends Component {
                                         beginAtZero: true
                                     }
                                 }]
+                            },
+                            //THIS IS FOR THE HOVER LABELS
+                            tooltips: {
+                                callbacks: {
+                                    title: function (tooltipItems, data) {
+                                        return '';
+                                    },
+                                    //IF YOU WANT TO CHANGE VALUE
+                                    // label: function (tooltipItem, data) {
+                                    //     return data.labels[tooltipItem.index];
+                                    // }
+                                }
                             },
                         }}
                     />
