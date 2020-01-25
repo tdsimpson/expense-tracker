@@ -15,12 +15,11 @@ const ChartInfo = (props) => {
 
 
     // Creating an array with only unique times (i.e. so that there is only one entry per day)
-    const uniqueTimes = (combinedList) => {
+    const uniqueTimes = (expenseDay) => {
         const momentValues = []
-        for (let i = 0; i < combinedList.length; i++) {
-            momentValues.push(combinedList[i][1][0].valueOf());
+        for (let i = 0; i < expenseDay.length; i++) {
+            momentValues.push(expenseDay[i].valueOf());
         }
-
         const uniq = [...new Set(momentValues)]
         return uniq;
     }
@@ -60,7 +59,7 @@ const ChartInfo = (props) => {
         });
 
         //Aggregating the data so values added on the same day are added together
-        const timeList = uniqueTimes(combinedList);
+        const timeList = uniqueTimes(expenseDay);
         const amountList = addedValues(combinedList, timeList);
 
         setChartData({
@@ -71,7 +70,6 @@ const ChartInfo = (props) => {
                     backgroundColor: 'rgba(54, 162, 235, 0.6)',
                     hoverBackgroundColor: 'rgba(153, 102, 254, 0.6)',
                 }
-
             ],
             labels: timeList,
         })
