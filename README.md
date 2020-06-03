@@ -1,6 +1,9 @@
 # expense-tracker
 A React web app to track expenses entered by the user
 
+<img src="images/landing-page.png" height=270px> <img src="images/bar-graph.png" height=270px> 
+<img src="images/expense-list.png" height=270px><img src="images/pie-chart.png" height=270px>
+
 ## Installation 
 1. Clone the github repository.
 ```
