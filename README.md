@@ -1,29 +1,29 @@
-# expense-tracker
-A React web app to track expenses entered by the user
+## About The Project
+A web app to track your expenses over time visualize them with interactive charts and graphs
 
 <img src="images/landing-page.png" height=200px> <img src="images/bar-graph.png" height=200px> 
 <img src="images/expense-list.png" height=270px><img src="images/pie-chart.png" height=270px>
 
-## Installation 
-1. Clone the github repository.
+### Built With
+* [React.js](https://reactjs.org/)
+* [Redux](https://redux.js.org/)
+* [Firebase](https://firebase.google.com/)
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+### Installation 
+Clone the github repository.
 ```
 git clone https://github.com/tdsimpson/expense-tracker.git
 ```
 
-2. Install the dependencies.
+Install the dependencies.
 ```
 yarn install
 ```
-3. Run development server
 
-```
-yarn run dev-server
-```
-
-The project should run on PORT 8080
-
-
-## Firebase Setup
+### Firebase Setup
 
 1. Go to the [Firebase console](https://console.firebase.google.com/u/0/) and create a new databse
 
@@ -43,4 +43,14 @@ FIREBASE_PROJECT_ID=[your key]
 FIREBASE_STORAGE_BUCKET=[your key]
 FIREBASE_MESSAGING_SENDER_ID=[your key]
 FIREBASE_APP_ID=[your key]
+
+
 ```
+
+### Run the development server
+
+```
+yarn run dev-server
+```
+
+The project should run on PORT 8080
