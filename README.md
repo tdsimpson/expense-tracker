@@ -2,6 +2,7 @@
 A web app to track your expenses over time visualize them with interactive charts and graphs
 
 Try it out online: https://tds-expense-tracker.herokuapp.com/
+Demo video: https://www.youtube.com/watch?v=VPtTarety28&t=161s
 
 <img src="images/landing-page.png" height=200px> <img src="images/bar-graph.png" height=200px> 
 <img src="images/expense-list.png" height=270px><img src="images/pie-chart.png" height=270px>
